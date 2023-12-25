@@ -4,7 +4,7 @@ export default function appendToEachArrayValue(array, appendString) {
     array[i] = appendString + idx;
     if (i < array.length) {
       i++;
+    }
   }
-
   return array;
 }
