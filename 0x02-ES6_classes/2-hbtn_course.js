@@ -1,5 +1,5 @@
 class HolbertonCourse {
-  contructor(name, length, students) {
+  constructor(name, length, students) {
     this._name = name;
     this._length = length;
     this._students = students;
@@ -20,8 +20,8 @@ class HolbertonCourse {
   }
 
   set length(length) {
-    if (typeof length === 'length') {
-      this.length = length;
+    if (typeof length === 'number') {
+      this._length = length;
     }
   }
 
@@ -30,7 +30,7 @@ class HolbertonCourse {
   }
 
   set students(students) {
-    if (Array.isArray(students) {
+    if (Array.isArray(students)) {
       this._students = students;
     }
   }
