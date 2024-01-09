@@ -1,7 +1,7 @@
 class Currency {
   constructor(code, name) {
-    this.code = code;
-    this.name = name;
+    this._code = code;
+    this._name = name;
   }
 
   get code() {
@@ -9,11 +9,7 @@ class Currency {
   }
 
   set code(code) {
-    if (typeof code !== 'string') {
-      throw new Error('code must be a string');
-    } else {
-        this._code = code;
-    }
+    this._code = code;
   }
 
   get name() {
@@ -21,11 +17,7 @@ class Currency {
   }
 
   set name(name) {
-    if (typeof name !== 'string') {
-      throw new Error('name must be a string');
-    } else {
-        this._name = name;
-    }
+    this._name = name;
   }
 
   displayFullCurrency() {
