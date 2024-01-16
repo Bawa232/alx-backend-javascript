@@ -1,14 +1,16 @@
 /**
- * Retrieves students from a particular city.
+ * Retrieves students in a given location.
  * @param {{
  *   id: Number,
  *   firstName: String,
  *   location: String
  * }[]} students - The list of students.
- * @author Bawa James <https://github.com/Bawa232>
+ * @param {String} city - The location.
  * @returns
  */
-export default function getStudentsByLocation(studs, city) {
-  const students = studs.filter((stud) => Object.values(stud).includes(city);
-  return students;
+export default function getStudentsByLocation(students, city) {
+  if (students instanceof Array) {
+    return students.filter((student) => student.location === city);
+  }
+  return [];
 }
